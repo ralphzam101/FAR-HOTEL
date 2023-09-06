@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+
+:root {
+  --gold-100: #cca405;
+  --gold-40: #FCD9B7;
+  --gold-20: #fcd9b783;
+  --blue-100: #161E31;
+  --blue-80: #0811468e;
+  --blue-60: #081146;
+  --blue-40: #2d32503b;
+  --black: #292C35;
+  --white: #fff;
+}
+
+* {
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+ font-size: 20px;
+ /* border: 1px solid red; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
+  background-color: var(--white);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+hr {
+  width: 90%;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--blue-100);
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 0px 5px;
+  position: sticky;
+  top:0;
+  z-index: 99;
+}
+
+header img {
+  width: 140px;
+}
+
+nav {
+  display: flex;
+  align-items: last baseline;
+  padding-bottom: 5px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin-inline: 1.5rem;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--gold-100);
+  font-weight: 600;
+}
+
+nav ul li .book-btn{
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  background-color: var(--gold-100);
+  border-radius: 15px;
+}
+
+nav ul li .book-btn:hover {
+  color: var(--blue-100);
+}
+
+nav ul li a:hover {
+  color: var(--white);
+}
+
+.nav-small {
+ display: none;
+}
+
+.menu-div {
+  display: none;
+}
+
+.d-block {
+  width: 100%;
+ 
+}
+
+.carousel-control-prev-icon {
+  color: var(--gold);
+}
+
+
+
+/* BOOKING DIV */
+.booking-div {
+  width: 100%;
+  background-color: var(--blue-100);
+  color: var(--gold-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.booking-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.division {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 10px;
+  width: 100%;
+}
+
+.division input {
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  border: 0;
+  height: 50px;
+  background-color: var(--white);
+}
+
+.division #checkin, .division #checkout {
+  width: 180px;
+}
+
+.division label {
+  margin-bottom: 5px;
+}
+
+.division.rooms, .division.guests {
+  margin-inline: 10px;
+}
+
+.division.rooms #rooms, .division.guests #guests {
+  width: 35px;
+  text-align: center;
+}
+
+.division.rooms .increment-div, .division.guests .increment-div{
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.division.button button {
+  padding: 0.25rem 0.5rem;
+  width: 200px;
+  height: 52px;
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--gold-100);
+}
+
+.checkAvailability.small{
+  display: none;
+}
+
+.division.button button a {
+  text-decoration: none;
+  text-align: center;
+  color: var(--white);
+}
+
+.increment-div .btn {
+  width: 25px;
+  text-align: center;
+  padding: 5px;
+}
+
+/* ---- Welcome Section ------ */
+.padding-4 {
+  padding: 3rem .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-div {
+  max-width: 1024px;
+  text-align: center;
+}
+
+.welcome-div h1 {
+  font-weight: 800;
+  color: var(--blue-100);
+  text-shadow: 2px 2px var(--gold-100);
+  margin-bottom: 1.5rem;
+}
+
+/* ----- PROMO SECTION ---- */
+.title {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.card-content-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  width: 330px;
+  height: 600px;
+  text-align: center;
+  box-shadow: 2px 2px 10px;
+} 
+
+.card-img img {
+  border-radius: 8px 8px 0 0 ;
+}
+
+.card-body {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-body p {
+  font-size: .9rem;
+}
+
+.card-body .card-btn {
+  padding: .25rem .5rem;
+  border: 0;
+  background-color: var(--gold-100);
+  color: var(--white);
+  border-radius: 10px;
+}
+
+.card-body .card-btn:hover {
+ transform: scale(0.98);
+}
+
+/* -- FEATURED ROOM SECTION --  */
+.secondary-background {
+  background-color: var(--blue-100);
+}
+
+.white-text {
+  color: var(--white);
+}
+
+
+/* -- AMENITIES AND ACTIVITES SECTION --*/
+
+.card-position {
+  position: relative;
+  border-radius: 10px;
+}
+
+.card-position img {
+  border-radius: 10px;
+}
+
+.card-position h2 {
+  position: absolute;
+  font-size: 1.25rem;
+  width: 100%;
+  bottom: 10%;
+  left: 0;
+  background-color: #0a2257a2;
+  color: var(--white);
+  padding: 10px 0;
+}
+
+.card-position:hover {
+  transform: scale(0.98);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* -- NEWS AND ANNOUNCEMENT --  */
+
+.card.add-width{
+  width: 400px;
+}
+
+
+/* -- TESTIMONIAL SECTION -- */
+
+.testimonial-content-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-inline: .6rem;
+  padding-top: 50px;
+  box-shadow: 1px 1px 5px;
+  position: relative;
+}
+.circle h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.circle p {
+  font-size: .85rem;
+  font-style: italic;
+}
+
+.circle .fa-quote-right {
+  font-size: 4rem;
+  position: absolute;
+  top: 10px;
+  color: #3c3d41;
+}
+
+.circle:nth-of-type(2) {
+  background-color: #3a3b412a;
+}
+
+.circle .fa-star, .circle .fa-star-half-stroke {
+  color: var(--gold-100);
+  margin-bottom: .25rem ;
+}
+
+/* -- CONTACT US SECTION -- */
+
+
+.contact-content-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem ;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.content h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}  
+
+.content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}  
+
+.content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}  
+
+.content iframe {
+
+  min-height: 320px;
+  min-width: 320px;
+}
+  
+
+
+/* -- Footer --  */
+footer {
+  width: 100%;
+  color: var(--gold-100);
+  text-align: center;
+}
+
+.footer-content-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .5rem  ;
+}
+
+.footer-div {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.footer-div h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer-div h4 {
+  font-size: .9rem;
+}
+
+.footer-div h4 a{
+  font-size: .9rem;
+  text-decoration: none;
+  color: var(--gold);
+}
+
+.footer-div span i {
+  font-size: 2rem;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.footer-div img {
+  width: 130px;
+}
+
+.footer-div h4 a:hover {
+  color: var(--white);
+}
+
+.footer-div span i:hover {
+  color: var(--white);
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* Laptops and small screen */
+@media (max-width: 1024px) { 
+
+  header {
+    padding: 10px 0 10px 5px;
+  }
+
+  nav ul li {
+    margin-inline: .75rem;
+  }
+
+  nav ul li a {
+    font-size: .85rem; 
+  }
+
+  nav ul li .book-btn {
+    padding: 10px 15px;
+  }
+
+  .division {
+    margin-inline: 5px;
+    font-size: 1rem;
+  }
+
+  .division input {
+    padding: 5px 8px;
+  }
+
+  .division #checkin, .division #checkout {
+    width: 170px;
+    font-size: .85rem;
+  }
+
+  .division.rooms, .division.guests {
+    margin-inline: 5px;
+  }
+
+  .division.rooms #rooms, .division.guests #guests {
+    width: 30px;
+  }
+
+  .division.button button {
+    padding: 5px 8px;
+    width: 170px;
+  }
+
+  .division.button button a {
+    font-size: .85rem;
+  }
+
+  .increment-div .btn {
+    width: 20px;
+  }
+}
+
+
+
+
+
+/* Tablets */
+@media (max-width: 768px) { 
+
+  * {
+    font-size: 18px;
+  }
+
+  /* ------ Navbar ------- */
+  header {
+    justify-content: space-between;
+    padding-inline: 3rem;
+  }
+  nav {
+    display: none;
+  }
+
+  .menu-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-div i {
+    color: var(--gold-100);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .nav-small.active {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 50px;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--blue-100);
+    box-shadow: 1px 0px 5px;
+    transition: 0.3s linear;
+  }
+
+  .nav-small span {
+    margin-block: 10px;
+  }
+
+  .nav-small span a {
+    text-decoration: none;
+    color: var(--gold-100);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+/* ----- Booking Div ----- */
+
+  .booking-div {
+    height: 100px;
+    padding-inline: 0;
+  }
+
+  .division {
+    margin-inline: 5px;
+  }
+
+  .division input {
+    padding: 5px 8px;
+  }
+
+  .division #checkin, .division #checkout {
+    width: 140px;
+    font-size: .85rem;
+  }
+
+  .division.rooms, .division.guests {
+   display: none;
+  }
+
+  .division.button button {
+    padding: 5px 8px;
+    width: 160px;
+  }
+  
+}
+
+
+
+/* Mobile devices */
+@media (max-width: 480px) {
+
+  * {
+    font-size: 16px;
+  }
+
+  header {
+    padding-inline: 10px;
+  }
+
+  .nav-small.active {
+    padding-right: 10px;
+  }
+
+
+  .checkAvailability.small{
+    display: block;
+  }
+
+  .checkAvailability.large{
+    display: none;
+  }
+
+  .division {
+    margin-inline: 3px;
+  }
+
+  .division #checkin, .division #checkout {
+    width: 120px;
+    font-size: .85rem;
+    padding: 5px;
+  }
+
+
+  .division.button button {
+    padding: 5px 8px;
+    width: 65px;
+  }
+
+  .padding-4 {
+    height: auto;
+    border: 1px solid red;
+  }
+
+  .welcome-div {
+    width: 1024px;
+    text-align: justify;
+  }
+
+  .welcome-div h1 {
+    text-align: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+}
+
+
+
+
+
+
