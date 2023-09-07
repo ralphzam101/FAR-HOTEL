@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+
+
+:root {
+  --gold-100: #cca405;
+  --gold-40: #FCD9B7;
+  --gold-20: #fcd9b783;
+  --blue-100: #161E31;
+  --blue-80: #0811468e;
+  --blue-60: #081146;
+  --blue-40: #2d32503b;
+  --black: #292C35;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box ;
+  font-size: 20px;
+  /* border: 1px solid red; */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.bookNow-img {
+  height: 450px;
+  width: 100%;
+}
+
+.bookNow-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.booking-summary-div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.right-content {
+  width: 30%;
+  height: auto;
+}
+
+.summary-details {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  box-shadow: 1px 1px 5px var(--blue-100);
+}
+
+.left-content {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.room-card {
+  display: flex;
+  box-shadow: 1px 1px 5px var(--gold-100);
+}
+
+.room-card img {
+  width: 35%;
+  background-size: contain;
+}
+.room-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.room-details h3, .room-details h5,.room-details h4{
+  padding: 10px;
+}
+
+.room-details h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue-100);
+  color: var(--white);
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.room-details h2 .select-btn {
+  background-color: var(--gold-100);
+  padding: .5rem .75rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.room-details h2 .select-btn:hover {
+  transform: scale(0.98);
+}
+
+.room-details h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  gap: .5rem;
+}
+.room-details h3 span i {
+  margin-right: 10px;
+}
+
+.room-details h5 {
+  font-size: .9rem;
+}
+
+.room-details h4 {
+  text-align: right;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--gold-100);
+}
+
+
+
+@media (max-width: 1024px) {
+  * {
+    font-size: 18px;
+  }
+  .booking-summary-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-content, .right-content {
+    width: 100%;
+  }
+  .left-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem ;
+  }
+
+  .room-card {
+    flex-direction: column;
+    width: 350px;
+  }
+
+  .room-card img {
+    width: 100%;
+  }
+
+  .room-details {
+    justify-content: space-between;
+  }
+
+  .room-details h2 {
+    font-size: 1.25rem;
+  }
+
+  .room-details h3 {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  .room-details h3, .room-details h5, .room-details h4{
+   text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  * {
+    font-size: 16px;
+  }
+  .bookNow-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .room-card {
+    width: 95%;
+  }
+
+}
